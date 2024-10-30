@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int Num, ans = 0, factor = 1;
+    printf("Enter a decimal number: ");
+    scanf("%d", &Num);
+    while (Num != 0) {
+        ans += (Num % 2) * factor; 
+        factor *= 10;            
+        Num /= 2;                  
+    }
+    printf("Binary equivalent: %d\n", ans);
+    return 0;
+}
